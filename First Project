@@ -1,0 +1,22 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, part_type TEXT, price INTEGER, name TEXT, tier TEXT);
+
+INSERT INTO store VALUES (1, "GPU", 4000, "4090 RTX", 1);
+INSERT INTO store VALUES (2, "GPU", 3500, "4080 RTX", 2);
+INSERT INTO store VALUES (3, "GPU", 3000, "3090Ti RTX", 3);
+INSERT INTO store VALUES (4, "GPU", 2500, "3090 RTX", 4);
+INSERT INTO store VALUES (5, "GPU", 2000, "3070 RTX", 5);
+
+INSERT INTO store VALUES (6, "CPU", 2500, "Intel i9", 1);
+INSERT INTO store VALUES (7, "CPU", 2000, "Intel i7", 3);
+INSERT INTO store VALUES (8, "CPU", 1000, "Intel i5", 5);
+INSERT INTO store VALUES (9, "CPU", 2500, "AMD Ryzen9", 2);
+INSERT INTO store VALUES (10, "CPU", 2100, "AMD Ryzen7", 4);
+
+INSERT INTO store VALUES (11, "Memory", 500, "M.2 3TB", 2);
+INSERT INTO store VALUES (12, "Memory", 475, "M.2 2TB", 3);
+INSERT INTO store VALUES (13, "Memory", 450, "M.2 1TB", 4);
+INSERT INTO store VALUES (14, "Memory", 650, "Samsung 5TB", 1);
+INSERT INTO store VALUES (15, "Memory", 150, "Seagate 500gb", 5);
+
+SELECT * FROM store ORDER BY price;
+SELECT MAX(tier) FROM store;
